@@ -233,6 +233,7 @@ a:hover, a:active, a:focus {
   background: #ffffff;
   border-radius: 5px;
   padding: 42px 22px;
+  margin-bottom: 20px;
   cursor: crosshair;
   position: relative;
   top: 0;
