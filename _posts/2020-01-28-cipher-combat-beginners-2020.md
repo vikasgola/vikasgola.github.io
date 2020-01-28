@@ -6,7 +6,7 @@ color:
 description: This is the writup for cipher combat ctf held on 22 january 2020. I would be discussing solutions to challenges which I was able to solve.
 ---
 
-This post contains writeups for the problems of [Cipher Combat Beginners ctf](https://cybersec.hackerearth.com/). In the end I was able to achieve rank #13 against 1598 who registered for the contest. I would be showing how I solved the problems to get that rank.
+This post contains writeups for the problems of [Cipher Combat Beginners ctf](https://cybersec.hackerearth.com/). In the end I was able to achieve rank #13 against 1598 who registered for the contest. I would be showing how I solved the problems.
 
 ## Rotate (Cryptography)
 
@@ -25,7 +25,7 @@ flag = HE{Now_You_Know_How_To_Rotate}
 Now Submit This.
 ```
 
-captured the flag.
+captured the flag!!!
 
 ## Reverse Password (Reverse Engineering)
 
@@ -70,9 +70,9 @@ __stack_chk_fail(0x564c9a36d283, 125, 0x32bc70261, 0*** stack smashing detected 
 +++ killed by SIGABRT +++
 ```
 
-captured the flag.
+captured the flag!!!
 
-## Welcome and QR-Code! (Steganography)
+## Welcome (Steganography), QR-Code! (Steganography), and ReadMe (MISC)
 
 In the Welcome challenge, we were given a png file. Opening the file in any image viewer shows the flag.
 ```
@@ -84,5 +84,57 @@ In the QR-Code! challenge, we were given a QR code. After decoding QR code using
 $ zbarimg ./find.png
 QR-Code:HE{Ahhhh!_Y0u_@r3_0N_4!gH7_Tr@cK}
 ```
+captured the flag!!!
 
-captured the flag. 
+A text file was given in ReadMe challenge that contains the flag.
+```bash
+$ cat readme.txt
+Copy This Flag and Submit to get Points.
+
+HE{YoU_are_Absolute_Beginner}
+
+-------------------------------------
+```
+captured the flag!!!
+
+## Ping (Android)
+
+A apk named ping.apk was given. I didn't run it because of my laziness and don't know what this apk does.
+
+However, I converted it to jar file using dex2jar and we get a ping-dex2jar.jar file.
+After, opening it in jdgui and checking MainActivity file, we get this.
+
+{% include elements/figure.html image="/assets/2020-01-28-cipher-combat-begginers-PING-challenge.png" caption="jdgui Screenshot" %}
+
+captured the flag!!!
+
+## CrackME (MISC)
+
+A zip file was given named Zipper.zip which asks for password at the extraction time.
+
+After trying *password*  (I mean why not?) as password it gets accepted.
+```bash
+$ unzip Zipper.zip
+Archive:  Zipper.zip
+[Zipper.zip] SuperSecret password: 
+ extracting: Zipper/SuperSecret
+```
+
+Let's see what is in the SuperSecret file.
+```bash
+$ cat SuperSecret
+HE{You_@re_@_Zip_Cracker}
+```
+captured the flag!!!
+
+## Play and Win (Reverse Engineering)
+
+A ELF binary file was given named TicTacToe.
+
+Runing strings on it.
+```bash
+$ strings TicTacToe | grep "HE" # grep for only printing the line which contains "HE" string
+	HE{You_are_a_tic_tac_toe_Ch@mpion}
+```
+
+captured the flag!!!

@@ -5,12 +5,12 @@ description         : >-
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : vikasgola/vikasgola.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
-
+author              : Vikas Gola
 
 ### Plugins ###
 plugins:
   - jemoji
-
+  - jekyll-feed
 
 ### Navbar Settings ###
 nav_exclude:                                            # The following paths are excluded from navbar
