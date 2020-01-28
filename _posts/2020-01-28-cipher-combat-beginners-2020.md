@@ -6,7 +6,7 @@ color:
 description: This is the writup for cipher combat ctf held on 22 january 2020. I would be discussing solutions to challenges which I was able to solve.
 ---
 
-This post contains writeups for the problems of [Cipher Combat Beginners ctf](https://cybersec.hackerearth.com/). In the end I was able to achieve rank #13 against 1598 who registered for the contest. I would be showing how I solved the problems.
+This post contains writeups for the problems of [Cipher Combat Beginners ctf](https://cybersec.hackerearth.com/). In the end, I was able to achieve rank #13 against 1598 who registered for the contest.
 
 ## Rotate (Cryptography)
 
@@ -104,7 +104,7 @@ A apk named ping.apk was given. I didn't run it because of my laziness and don't
 However, I converted it to jar file using dex2jar and we get a ping-dex2jar.jar file.
 After, opening it in jdgui and checking MainActivity file, we get this.
 
-{% include elements/figure.html image="/assets/2020-01-28-cipher-combat-begginers-PING-challenge.png" caption="jdgui Screenshot" %}
+{% include elements/figure.html image="https://vikasgola.github.io/assets/2020-01-28-cipher-combat-begginers-PING-challenge.png" caption="jdgui Screenshot" %}
 
 captured the flag!!!
 
