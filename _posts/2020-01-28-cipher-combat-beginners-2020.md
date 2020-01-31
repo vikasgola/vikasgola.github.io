@@ -336,7 +336,8 @@ Here the flag was encoded as *character_of_flag/position_of_character_in_flag* a
 
 909 ELF files were given. Disassembling one of them and output looks like this.
 
-```asm
+```bash
+$ objdump -d revme1 -M intel
 revme1:     file format elf64-x86-64
 
 Disassembly of section .shellcode:
@@ -402,7 +403,8 @@ captured the flag!!!
 ## Lame Virus (Reverse Engineering)
 
 A Windows executable was given. Extract it with 7zip.
-```
+```bash
+$ 7z x lame-virus.exe
 Processing archive: lame-virus.exe
 
 Extracting  .text
