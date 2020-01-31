@@ -3,12 +3,13 @@ title: Writeup for Cipher Combat Beginners 2020
 tags: [CTF, Cyber Security, Hackerearth]
 style: 
 color: 
-description: This is the writup for cipher combat ctf held on 22 january 2020. I would be discussing solutions to challenges which I was able to solve.
+description: This is the writup for cipher combat ctf held on 22 january 2020. I would be showing solutions to challenges which I solved.
 ---
+
 <a class="text-center" href="https://feedburner.google.com/fb/a/mailverify?uri=VikasGola&amp;loc=en_US" onclick="window.open(this.href, 'subscribe',
     'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">Subscribe for New Posts</a>
 
-This post contains writeups for the problems of [Cipher Combat Beginners ctf](https://cybersec.hackerearth.com/). In the end, I was able to achieve rank #13 against 1598 who registered for the contest.
+This post contains writeups of the problems from [Cipher Combat Beginners ctf](https://cybersec.hackerearth.com/). In the end, I was able to achieve rank #13 against 1598 who registered for the contest.
 
 ## Rotate (Cryptography)
 
@@ -329,5 +330,117 @@ $ find . -type f # dont print empty directories
 ./._/8
 ```
 
-Here the flag is encoded as *character_of_flag/position_of_character_in_flag*.
-The flag was `HE{Y0U_G0T_50M3_5K1LLS}`.
+Here the flag was encoded as *character_of_flag/position_of_character_in_flag* and decoding it gave us`HE{Y0U_G0T_50M3_5K1LLS}`.
+
+## Reverse Master (Reverse Engineering)
+
+909 ELF files were given. Disassembling one of them and output looks like this.
+
+```asm
+revme1:     file format elf64-x86-64
+
+Disassembly of section .shellcode:
+
+00000000006000b0 <.shellcode>:
+  6000b0:	6a 00                	push   0x0
+  6000b2:	6a 05                	push   0x5
+  6000b4:	48 89 e7             	mov    rdi,rsp
+  6000b7:	48 c7 c0 23 00 00 00 	mov    rax,0x23
+  6000be:	0f 05                	syscall 
+  6000c0:	58                   	pop    rax
+  6000c1:	58                   	pop    rax
+  6000c2:	48 8b 44 24 10       	mov    rax,QWORD PTR [rsp+0x10]
+  6000c7:	8a 10                	mov    dl,BYTE PTR [rax]
+  6000c9:	80 c2 2e             	add    dl,0x2e 
+  6000cc:	80 fa 76             	cmp    dl,0x76 
+  6000cf:	75 10                	jne    0x6000e1
+  6000d1:	48 c7 c7 00 00 00 00 	mov    rdi,0x0
+  6000d8:	48 c7 c0 3c 00 00 00 	mov    rax,0x3c
+  6000df:	0f 05                	syscall 
+  6000e1:	48 c7 c7 01 00 00 00 	mov    rdi,0x1
+  6000e8:	48 c7 c0 3c 00 00 00 	mov    rax,0x3c
+  6000ef:	0f 05                	syscall 
+```
+
+Reverse process from address 0x6000cc to 0x6000c7. Result is in rax.
+```python3
+$ python3
+>>> chr(0x76-0x2e)
+'H'
+```
+
+Here is the script in bash to solve it.
+
+```bash
+# sol.sh
+for i in {1..909}; do
+    a=$(objdump -d revme$i -Mintel | grep dl | sed -n 2,3p)
+    # echo $a
+    arg=$(echo "$a" | grep -oiE "0x.+")
+
+    case "$a" in 
+        *add*)
+            echo $arg | sed -e 's/ /-/' | python3 -c "print(chr(abs(eval(input()))%128), end='')"
+            ;;
+        *sub*)
+            echo $arg | sed -e 's/ /+/' | python3 -c "print(chr(abs(eval(input()))%128), end='')"
+            ;;
+        *xor*)
+            echo $arg | sed -e 's/ /^/' | python3 -c "print(chr(abs(eval(input()))%128), end='')"
+            ;;
+    esac
+done;
+```
+
+```bash
+$ bash sol.sh
+HackerEarth provides enterprise software solutions that help organisations with their technical recruitment needs. HackerEarth has conducted 1000+ hackathons and 10,000+ programming challenges to date. Since its inception, HackerEarth has built a developer base of over 3 million+. Today, more than 750 customers worldwide use its Assessments platform, including Amazon, Walmart Labs, Thoughtworks, Societe Generale, HP, VMware, DBS, HCL, GE, Wipro, Barclays, Pitney Bowes, Intel, and L&T Infotech. HackerEarth Assessments is a technical recruitment platform that helps organizations hire developers using automated technical talent tests. Flag is HE{6586C7Fdbae82C4877f57f0A7386f578ACc69737fF8293Ab1F851BA0b6Ee0C74}. The proprietary tech assessment platform vets technical talent through skill-based evaluation and analytics. Companies also use the B2B product for lateral recruitment and university hiring.
+```
+
+captured the flag!!!
+
+## Lame Virus (Reverse Engineering)
+
+A Windows executable was given. Extract it with 7zip.
+```
+Processing archive: lame-virus.exe
+
+Extracting  .text
+Extracting  .data
+Extracting  .rdata
+Extracting  /4
+Extracting  .bss
+Extracting  .idata
+Extracting  .CRT
+Extracting  .tls
+Extracting  /14
+Extracting  /29
+Extracting  /41
+Extracting  /55
+Extracting  /67
+Extracting  COFF_SYMBOLS
+
+Everything is Ok
+
+Files: 14
+Size:       41193
+Compressed: 42217
+```
+
+Content of .rdata file.
+```
+libgcc_s_dw2-1.dll__register_frame_info__deregister_frame_infolibgcj-16.dll_Jv_RegisterClasseswww.hackerearth.com/SkJDWFdZTE9HQjJHUU0zRk9KUFdHM0JVT05aV1NZMjdOVTJHWTUzQk9JWlgyPT09SystemRoota
+```
+
+Found a base64 string. Decoding it.
+```bash
+$ echo "SkJDWFdZTE9HQjJHUU0zRk9KUFdHM0JVT05aV1NZMjdOVTJHWTUzQk9JWlgyPT09" | base64 -d
+JBCXWYLOGB2GQM3FOJPWG3BUONZWSY27NU2GY53BOIZX2===
+```
+Hmm... Looks like base64 again. Nope, it's base32.
+
+```bash
+$ echo "JBCXWYLOGB2GQM3FOJPWG3BUONZWSY27NU2GY53BOIZX2===" | base32 -d
+HE{an0th3er_cl4ssic_m4lwar3}
+```
+captured the flag!!!
