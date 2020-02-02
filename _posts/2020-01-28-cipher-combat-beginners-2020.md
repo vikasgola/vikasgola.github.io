@@ -4,6 +4,7 @@ tags: [CTF, Cyber Security, Hackerearth]
 style: 
 color: 
 description: This is the writup for cipher combat ctf held on 22 january 2020. I would be showing solutions to challenges which I solved.
+comments: true
 ---
 
 <a class="text-center" href="https://feedburner.google.com/fb/a/mailverify?uri=VikasGola&amp;loc=en_US" onclick="window.open(this.href, 'subscribe',
@@ -446,3 +447,24 @@ $ echo "JBCXWYLOGB2GQM3FOJPWG3BUONZWSY27NU2GY53BOIZX2===" | base32 -d
 HE{an0th3er_cl4ssic_m4lwar3}
 ```
 captured the flag!!!
+
+
+
+
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = "{{ page.url }}";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "{{ page.id }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vikasgola.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}

@@ -4,6 +4,7 @@ tags: [Android, Cyber Security, Hacking]
 style: 
 color: 
 description: In this post, I would show how you can edit/exploit shared preferences of android applications.
+comments: true
 ---
 
 <a class="text-center" href="https://feedburner.google.com/fb/a/mailverify?uri=VikasGola&amp;loc=en_US" onclick="window.open(this.href, 'subscribe',
@@ -46,3 +47,22 @@ Root android user can also read, write, and modify all files of “/” director
 Note that this trick might not work on some key-value pair configuration as, they might be confirmed every time from the server and get sets to its correct value which it should have been.
 
 *Warning:- I am not responsible for any damage to your phone or you, do it at your own risk. Also, rooting your phone may void your phone’s warranty.*
+
+
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = "{{ page.url }}";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "{{ page.id }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vikasgola.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
