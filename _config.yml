@@ -1,7 +1,6 @@
 ### Site Settings ###
 title               : Vikas Gola
-description         : >-
-                      "I love, both, to build things and to break them."
+description         : "I love, both, to build things and to break them."
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : vikasgola/vikasgola.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
@@ -11,14 +10,6 @@ author              : Vikas Gola
 plugins:
   - jemoji
   - jekyll-feed
-  - jekyll-analytics
-
-
-jekyll_analytics:
-  GoogleAnalytics:          # Add, if you want to track with Google Analytics
-    id: UA-157576871-1          # Required - replace with your tracking id
-    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
-
 
 ### Navbar Settings ###
 nav_exclude:                                            # The following paths are excluded from navbar
