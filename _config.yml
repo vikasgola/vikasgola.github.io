@@ -11,6 +11,14 @@ author              : Vikas Gola
 plugins:
   - jemoji
   - jekyll-feed
+  - jekyll-analytics
+
+
+jekyll_analytics:
+  GoogleAnalytics:          # Add, if you want to track with Google Analytics
+    id: UA-157576871-1          # Required - replace with your tracking id
+    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
+
 
 ### Navbar Settings ###
 nav_exclude:                                            # The following paths are excluded from navbar
