@@ -23,10 +23,7 @@ Let's cover some bases first.
 cnRjcHt5b3VyZV92ZXJ5X3dlbGNvbWV9
     "
     solution=""
-    image1="
-{% include elements/figure.html image='https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-1-2020.png' %}
-    "    
-
+    image1="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-1-2020.png"
 %}
 
 
