@@ -10,6 +10,8 @@ comments: true
 <a class="text-center" href="https://feedburner.google.com/fb/a/mailverify?uri=VikasGola&amp;loc=en_US" onclick="window.open(this.href, 'subscribe',
     'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">Subscribe for New Posts</a>
 
+---
+
 This post contains writeups of the problems from [Cipher Combat Beginners ctf](https://cybersec.hackerearth.com/). In the end, I was able to achieve rank #13 against 1598 who registered for the contest.
 
 ## Rotate (Cryptography)

@@ -10,6 +10,8 @@ comments: true
 <a class="text-center" href="https://feedburner.google.com/fb/a/mailverify?uri=VikasGola&amp;loc=en_US" onclick="window.open(this.href, 'subscribe',
     'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">Subscribe for New Posts</a>
 
+---
+
 Shared Preferences allow android developers to store data as key-value pair in android devices for any specific application which may be used later for multiple purposes. It is kind of local storage for android applications. It does not use any kind of encryption by itself to store this data and it is not safe to save important data there. However, some developers either don't know about it or thought that thing won't be attacked. This data is stored at location “/data/data/” in [XML](https://www.wikiwand.com/en/XML) files which can’t be accessed by normal android users. So, how can we access it and what’s so important there?
 
 [Rooting](https://www.wikiwand.com/en/Rooting_(Android)) android device is similar to achieving super user access in android which opens a whole new world of android. With root user, you can tweak hardware settings, remove bloatware, fully control applications, install custom ROMs, install BusyBox (bundle of Unix utilities), and much more. Now, you probably have guessed now that we would be needed a rooted android device. I would not be discussing how to root android device and you can search on the web for how to do it.

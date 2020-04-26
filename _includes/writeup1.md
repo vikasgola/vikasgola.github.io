@@ -8,7 +8,12 @@
 
 {{include.solution}}
 
-{% if include.image1 %}
-{% include elements/figure.html 
-    image=include.image1 %}
+{% capture carousel_images %}
+
+{% for image in include.images %}
+{{image}}
 {% endif %}
+
+{% endcapture %}
+{% include elements/carousel.html %}
+
