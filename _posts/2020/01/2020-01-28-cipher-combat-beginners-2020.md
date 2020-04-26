@@ -108,7 +108,7 @@ A apk named ping.apk was given. I didn't run it because of my laziness and don't
 However, I converted it to jar file using dex2jar and we get a ping-dex2jar.jar file.
 After, opening it in jdgui and checking MainActivity file, we get this.
 
-{% include elements/figure.html image="https://vikasgola.github.io/assets/2020-01-28-cipher-combat-begginers-PING-challenge.png" caption="jdgui Screenshot" %}
+{% include elements/figure.html image="https://vikasgola.github.io/assets/2020/01/2020-01-28-cipher-combat-begginers-PING-challenge.png" caption="jdgui Screenshot" %}
 
 captured the flag!!!
 
@@ -200,7 +200,7 @@ usage: ./lexiscan tmfile
 
 Looking at the *.rodata section* of binary file in ghidra, shows a suspicious string at address 0049c01f which looks like base64 encoded string.
 
-{% include elements/figure.html image="https://vikasgola.github.io/assets/2020-01-28-cipher-combat-begginers-LEXISCAN-challenge.png" caption="Screenshot from ghidra" %}
+{% include elements/figure.html image="https://vikasgola.github.io/assets/2020/01/2020-01-28-cipher-combat-begginers-LEXISCAN-challenge.png" caption="Screenshot from ghidra" %}
 
 Try to decode `SEV7MzRzeV9yM3ZlcnNpbmd9` from base64.
 ```bash
@@ -214,7 +214,7 @@ captured the flag!!!
 
 A png file which contains call graph with disassembly code of main function of a program was given.
 
-{% include elements/figure.html image="https://vikasgola.github.io/assets/2020-01-28-cipher-combat-begginers-SHIFTER-challenge.png" caption="given image" %}
+{% include elements/figure.html image="https://vikasgola.github.io/assets/2020/01/2020-01-28-cipher-combat-begginers-SHIFTER-challenge.png" caption="given image" %}
 
 `rf.bo'b/$ke` string is being pushed to stack in the code which is most likely encrypted flag.
 On looking further, variable *var_4h* is being compared to 0xb which is also the length of the encrypted flag. This indicates for loop on encrypted flag. Also in the loop, eax register which was set to loop variable is being added with the characters of encrypted flag on every step.

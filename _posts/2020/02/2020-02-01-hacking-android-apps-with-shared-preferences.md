@@ -19,13 +19,13 @@ Root android user can also read, write, and modify all files of “/” director
 1. Install the app you want to hack or explore and use it for a while.
 
 2. Open path “/data/data/” in ES File Explorer where you would find folders with package name of your installed applications.
-    {% include elements/figure.html image="https://vikasgola.github.io/assets/2020-02-01-hacking-android-with-shared-preferences-root.jpg" caption="Click 'Device' to open root directory " %}
+    {% include elements/figure.html image="https://vikasgola.github.io/assets/2020/02/2020-02-01-hacking-android-with-shared-preferences-root.jpg" caption="Click 'Device' to open root directory " %}
 
-    {% include elements/figure.html image="https://vikasgola.github.io/assets/2020-02-01-hacking-android-with-shared-preferences-data-data.jpg" caption="/data/data/ directory" %}
+    {% include elements/figure.html image="https://vikasgola.github.io/assets/2020/02/2020-02-01-hacking-android-with-shared-preferences-data-data.jpg" caption="/data/data/ directory" %}
 
 1. Open folder of any application that you want to explore and open “shared_prefs” folder(if it does not exist try to use that app a little more and it would be created eventually.) in it. Final path would be “/data/data/io.package.name/shared_prefs”.
 
-    {% include elements/figure.html image="https://vikasgola.github.io/assets/2020-02-01-hacking-android-with-shared-preferences-shared-pref.jpg" caption="shared preference directory" %}
+    {% include elements/figure.html image="https://vikasgola.github.io/assets/2020/02/2020-02-01-hacking-android-with-shared-preferences-shared-pref.jpg" caption="shared preference directory" %}
 
     This folder contains all the Shared Preferences data in XML files related to app whose folder it is. Every XML file contains number of key-value pairs. 
     These files contain all the hidden configuration, non-hidden configuration, cookies of app, and most of the things which an app needs to store to work properly. It may include boolean values for verification of the membership or for verification of accessibility of premium features. Some gaming apps might store details like how max have you scored or at which level you are.
