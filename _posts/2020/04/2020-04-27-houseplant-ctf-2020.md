@@ -21,9 +21,9 @@ When Bob and Jia were thrown into the world of cybersecurity, they didn't know a
 Let's cover some bases first.
 
 cnRjcHt5b3VyZV92ZXJ5X3dlbGNvbWV9
-    "
+"
     solution=""
-    images=["https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-1-2020.png"]
+    images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-1-2020.png"
 %}
 
 
@@ -38,7 +38,7 @@ Thanks, Bob.
 72 74 63 70 7b 62 6f 62 5f 79 6f 75 5f 73 75 63 6b 5f 61 74 5f 62 65 69 6e 67 5f 65 6e 63 6f 75 72 61 67 69 6e 67 7d
 "
     solution=""
-    images=["https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-2-2020.png"]
+    images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-2-2020.png"
 %}
 
 
@@ -52,7 +52,7 @@ Fun fact: Jia didn't actually know what this was when they first started out. If
 162 164 143 160 173 163 165 145 137 155 145 137 151 137 144 151 144 156 164 137 153 156 157 167 137 167 150 141 164 137 157 143 164 141 154 137 167 141 163 137 157 153 141 171 77 41 175
 "
     solution=""
-    images=["https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-3-2020.png"]
+    images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-3-2020.png"
 %}
 
 
@@ -65,7 +65,7 @@ Caesar was stabbed 23 times by 60 perpetrators... sounds like a modern group pro
 egpc{lnyy_orggre_cnegvpvcngr}
 "
     solution=""
-    images=["https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-4-2020.png"]
+    images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-4-2020.png"
 %}
 
 
@@ -80,7 +80,7 @@ beep boop
 Remember to wrap the flag in the flag format rtcp{something}
 "
     solution=""
-    images=["https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-5-2020.png"]
+    images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-5-2020.png"
 %}
 
 
@@ -97,7 +97,7 @@ i'm so tired...
 Remember to wrap the whole thing in the flag format rtcp{}
 "
     solution=""
-    images=["https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-6-2020.png"]
+    images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-6-2020.png"
 %}
 
 
@@ -111,7 +111,7 @@ Don't go around bashing people.
 igxk{fmovhh_gsvb_ziv_nvzm}
 "
     solution=""
-    images=["https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-7-2020.png"]
+    images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-7-2020.png"
 %}
 
 
@@ -126,8 +126,8 @@ You either mildly enjoy bacon, think it's a food of the gods, or are vegan/veget
 
 Remember to wrap the flag in rtcp{}
 "
-    solution="Flag was encoded with bacon"
-    images=["https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-8-2020.png"]
+    solution=""
+    images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-8-2020.png"
 %}
 
 {% include writeup1.md 
@@ -151,7 +151,7 @@ pmqc{tbbretf_bl_fm_sglv_nlw_qugig_cjxofc}
 
 "
     solution="Given text was encrypted with Vigenere cipher. We need to bruteforce the key."
-    images=["https://vikasgola.github.io/assets/2020/04/2020-04-27-CHCOOH-2020.png"]
+    images="https://vikasgola.github.io/assets/2020/04/2020-04-27-CHCOOH-2020.png"
 %}
 
 
@@ -164,9 +164,10 @@ oh no! i'm so clumsy, i spilled my glass of milk! can you please help me clean u
 
 "
     solution="Simple Stego challenge of image. Flag was hidden in the first bit blue plane."
-    images=["https://vikasgola.github.io/assets/2020/04/2020-04-27-spilled-milk.png"]
+    images="https://vikasgola.github.io/assets/2020/04/2020-04-27-spilled-milk.png"
 %}
 
+{% assign imagesnext = "https://vikasgola.github.io/assets/2020/04/2020-04-27-i-dont-like-needles-1.png https://vikasgola.github.io/assets/2020/04/2020-04-27-i-dont-like-needles-3.png https://vikasgola.github.io/assets/2020/04/2020-04-27-i-dont-like-needles-2.png" | split: " " %}
 
 {% include writeup1.md 
     title="I don't like needles"
@@ -177,11 +178,7 @@ They make me SQueaL!
 http://challs.houseplant.riceteacatpanda.wtf:30001
 "
     solution="Standard SQL injection."
-    images=[
-        "https://vikasgola.github.io/assets/2020/04/2020-04-27-i-dont-like-needles-1.png",
-        "https://vikasgola.github.io/assets/2020/04/2020-04-27-i-dont-like-needles-3.png"
-        "https://vikasgola.github.io/assets/2020/04/2020-04-27-i-dont-like-needles-2.png",
-    ]
+    images=imagesnext
 %}
 
 
@@ -207,9 +204,7 @@ To retrived the flag, we need to get flag character by character and thats what 
 ```
 
 "
-    images=[
-        "https://vikasgola.github.io/assets/2020/04/2020-04-27-qr-generator.png",
-    ]
+    images="https://vikasgola.github.io/assets/2020/04/2020-04-27-qr-generator.png"
 %}
 
 

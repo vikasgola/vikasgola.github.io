@@ -12,8 +12,8 @@
 
 {% for image in include.images %}
 {{image}}
-{% endif %}
+{% endfor %}
 
 {% endcapture %}
-{% include elements/carousel.html %}
 
+{% include elements/carousel.html %}
