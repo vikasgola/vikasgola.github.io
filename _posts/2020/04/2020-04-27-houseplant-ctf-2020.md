@@ -4,6 +4,7 @@ tags: [Cyber Security, Hacking, CTF]
 style: 
 color: 
 description: This is the writups for Houseplant CTF 2020 organized by riceteacatpanda.
+comments: true
 ---
 
 <a class="text-center" href="https://feedburner.google.com/fb/a/mailverify?uri=VikasGola&amp;loc=en_US" onclick="window.open(this.href, 'subscribe',
