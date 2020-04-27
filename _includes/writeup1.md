@@ -1,19 +1,16 @@
 ## {{include.title}} ({{include.category}})
 
-##### **Problem Statement**
-
 {{include.problem}}
 
-##### **Solution**
 
 {{include.solution}}
 
-{% capture carousel_images %}
+
+{% if include.gist %}
+{% gist include.gist include.gistfile %}
+{% endif %}
+
 
 {% for image in include.images %}
-{{image}}
+{% include elements/figure.html image=image %}
 {% endfor %}
-
-{% endcapture %}
-
-{% include elements/carousel.html %}
