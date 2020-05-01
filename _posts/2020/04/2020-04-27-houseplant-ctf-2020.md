@@ -23,7 +23,7 @@ Solutions of problems from [Houseplant CTF 2020](https://houseplant.riceteacatpa
 >
 >cnRjcHt5b3VyZV92ZXJ5X3dlbGNvbWV9
 "
-    solution=""
+    solution="CyberChef solution."
     images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-1-2020.png"
 %}
 
@@ -38,7 +38,7 @@ Solutions of problems from [Houseplant CTF 2020](https://houseplant.riceteacatpa
 >
 >72 74 63 70 7b 62 6f 62 5f 79 6f 75 5f 73 75 63 6b 5f 61 74 5f 62 65 69 6e 67 5f 65 6e 63 6f 75 72 61 67 69 6e 67 7d
 "
-    solution=""
+    solution="CyberChef solution."
     images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-2-2020.png"
 %}
 
@@ -52,7 +52,7 @@ Solutions of problems from [Houseplant CTF 2020](https://houseplant.riceteacatpa
 >
 >162 164 143 160 173 163 165 145 137 155 145 137 151 137 144 151 144 156 164 137 153 156 157 167 137 167 150 141 164 137 157 143 164 141 154 137 167 141 163 137 157 153 141 171 77 41 175
 "
-    solution=""
+    solution="CyberChef solution."
     images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-3-2020.png"
 %}
 
@@ -65,7 +65,7 @@ Solutions of problems from [Houseplant CTF 2020](https://houseplant.riceteacatpa
 >
 >egpc{lnyy_orggre_cnegvpvcngr}
 "
-    solution=""
+    solution="CyberChef solution."
     images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-4-2020.png"
 %}
 
@@ -80,7 +80,7 @@ Solutions of problems from [Houseplant CTF 2020](https://houseplant.riceteacatpa
 >
 >Remember to wrap the flag in the flag format rtcp{something}
 "
-    solution=""
+    solution="CyberChef solution."
     images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-5-2020.png"
 %}
 
@@ -97,7 +97,7 @@ Solutions of problems from [Houseplant CTF 2020](https://houseplant.riceteacatpa
 >
 >Remember to wrap the whole thing in the flag format rtcp{}
 "
-    solution=""
+    solution="CyberChef solution."
     images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-6-2020.png"
 %}
 
@@ -111,7 +111,7 @@ Solutions of problems from [Houseplant CTF 2020](https://houseplant.riceteacatpa
 >
 >igxk{fmovhh_gsvb_ziv_nvzm}
 "
-    solution=""
+    solution="CyberChef solution."
     images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-7-2020.png"
 %}
 
@@ -127,7 +127,7 @@ Solutions of problems from [Houseplant CTF 2020](https://houseplant.riceteacatpa
 >
 >Remember to wrap the flag in rtcp{}
 "
-    solution=""
+    solution="CyberChef solution."
     images="https://vikasgola.github.io/assets/2020/04/2020-04-27-begginer-8-2020.png"
 %}
 
